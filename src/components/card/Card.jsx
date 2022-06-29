@@ -1,13 +1,27 @@
 import "./Card.css"
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const Card = ({ name, img, options }) => {
 
   const [isDisplay, setIsDisplay] = useState(true);
 
+  const changer = () =>{
+    setIsDisplay(() => !isDisplay);
+  }
+  useEffect(()=>{
+    if(!isDisplay){
+      setTimeout(()=>setIsDisplay(!isDisplay),1000);
+    }},[isDisplay]);
+
+  // const changer = () => {
+  //   setIsDisplay(!isDisplay);
+  // }
+  // if (!isDisplay) {
+  //   setTimeout(() => setIsDisplay(!isDisplay), 1000);
+  // }
   return (
-    <div className="cardUnit" onClick={() => setIsDisplay(!isDisplay)}>
-      {isDisplay && <><img src={img} alt={name} width="150"/>
+    <div className="cardUnit" onClick={() => changer()}>
+      {isDisplay && <><img src={img} alt={name} width="150" />
         <h3>{name}</h3></>}
 
       {!isDisplay && <ul>
