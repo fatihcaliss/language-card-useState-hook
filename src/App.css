@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+}
+body{
+  background-color: rgb(255, 255, 151);
+}
+
+main{
+  background-color: rgb(250, 106, 53);
+  width: 500px;
+  border-radius: 2rem;
+}
+
+.card-main{
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

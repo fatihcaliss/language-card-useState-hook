@@ -1,0 +1,18 @@
+.cardUnit{
+    width: 200px;
+    height: 250px;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem;
+}
+img{
+    transition: all 1s;
+}
+
+img:hover{
+    transform: scale(1.2);
+}
